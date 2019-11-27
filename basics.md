@@ -1,29 +1,132 @@
 # amLang
-### Spec by Alex Merced of AlexMercedCoder.com
+### Basic file structure
 
-This document is to detail the specifications for amLang, a programming language based
-on my experience with different languages and how a more developer friendly language may look
-like borrowing from many of other languages.
+The file extension for amlang documents is .am and html and css can be included. To identify the syntax being used the following is used to distinguish.
 
-## Implementation
+To start parsing in amlang, HTML or css
 
-This programming language is currently just the specifications in these documents but overtime I hope
-to implement this language by either compiling to WebAssembly or transpiling to Javascript. If you are
-interested in seeing an implementation of this language I encourage you to create one.
+===amlang===
+===html===
+===css===
 
-## Basic Features
+to close the last opened parse indicator
 
-- Dynamic Typing (similar to javascript)
-- Tab based syntax (similar to python)
-- Dynamic loops (no for, no while, just loop with different constructors)
-- array and associative arrays (similar to PHP)
-- The ability to use operators in between values like OOP languages and before values like lisp
+To inject bound variable into html (data binding assumes front-end WASM implementation)
+<{variable}>
 
-## Sections
+======
+
+### comments
+
+inline comments are made with ///
+
+multi-line comments are surrounded with //////
+
+### print to console
+
+print('string')
+
+### Variable assignment
+
+variableName <: value
+
+This is used for variables, collections, functions and classes
+
+### Multi-Variable assignment
+
+var1,var2,var3 <: val1, val2, val3
+
+This can be used for variables and collections, not functions and classes
+
+### Math Operators
+
+Addition: +
+
+Subtraction: -
+
+Multiplication: *
+
+Division: /
+
+Floor Division: //
+
+Modulus: %
+
+increment: ++
+
+decrement --
+
+Exponent: ^
+
+### Boolean operators
+
+Equality: =
+
+Greater than: >
+
+Less that: <
+
+Greater/Equal: >=
+
+Less/Equal: <=
+
+Not: !=
+
+### Example Code
+
+example.am
+```
+===amlang===
+
+myInt <: 1
+myFloat <: 55.5
+myString <: "Hello World"
+myBoolean <: 5 > 6 /// Equals false
+
+print(myString) ///Prints "Hello World"
+
+//Addition
+
+print(2+2) ///prints 4
+print(+ 2 2 2) /// prints 6
+
+///Subtraction
+
+print(2-2) ///prints 0
+print(- 2 2 2) /// prints -2
+
+///Multiplication
+
+print(2*2) ///prints 4
+print(* 2 2 2) /// prints 8
+
+//Division
+
+print(2/2) ///prints 1
+print(/ 2 2 2) /// prints .5
+
+//Floor Division
+
+print(2//2) ///prints 1
+print(// 2 2 2) /// prints 0
+
+===html===
+
+<div>
+
+<{myString}>
+
+</div>
+
+======
+
+//Modulus
+
+print(2%2) ///prints 0
+print(% 2 2 2) /// prints 0
 
 
-[Basics, Variables and Operations](./basics.md)
-[Conditionals and Loops](./conditionals.md)
-[Collections](./collections.md)
-[Functions](./functions.md)
-[Classes](./classes.md)
+======
+
+
+```
