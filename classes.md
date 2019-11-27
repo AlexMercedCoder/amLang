@@ -2,7 +2,7 @@
 ### Spec by Alex Merced of AlexMercedCoder.com
 
 
-##classes
+## classes
 
 ```
 ///creating a class

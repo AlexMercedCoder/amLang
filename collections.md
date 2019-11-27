@@ -2,7 +2,7 @@
 ### Spec by Alex Merced of AlexMercedCoder.com
 
 
-##collections
+## collections
 
 ```
 ///array which can include any amount of any type
