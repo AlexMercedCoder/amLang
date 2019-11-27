@@ -23,7 +23,15 @@ interested in seeing an implementation of this language I encourage you to creat
 
 
 [Basics, Variables and Operations](./basics.md)
+
+
 [Conditionals and Loops](./conditionals.md)
+
+
 [Collections](./collections.md)
+
+
 [Functions](./functions.md)
+
+
 [Classes](./classes.md)
